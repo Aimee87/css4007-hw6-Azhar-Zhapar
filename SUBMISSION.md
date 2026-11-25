@@ -143,16 +143,57 @@ If multiple actions had the same value, the first action encountered in the orde
 ↑   →   ↑   ←
 ```
 
-### Simulation results
+### Simulation Results
 
 | Map | Batch seed | Goals /50 | Holes /50 | Time limits /50 | Mean steps | Mean discounted return |
-| --- | --- | --- | --- | --- | --- | --- |
+|------|------|------|------|------|------|------|
+| Original | 11 | 50 | 0 | 0 | 5.00 | 1.50 |
+| Original | 22 | 50 | 0 | 0 | 5.00 | 1.50 |
+| Original | 33 | 50 | 0 | 0 | 5.00 | 1.50 |
+| Extended | 11 | 50 | 0 | 0 | 5.00 | 1.50 |
+| Extended | 22 | 50 | 0 | 0 | 5.00 | 1.50 |
+| Extended | 33 | 50 | 0 | 0 | 5.00 | 1.50 |
 
 ### Explain your results
 
-Which values/actions changed with sand and water? Where did cost and risk matter? How do simulations relate to the computed values?
+The policy reached the goal in all episodes on both maps. There were no holes and no time limits.
 
-### Rule checks
+Adding sand and water changed the values only a little. The value of one state changed from 1.54 to 1.50 because the new tiles have extra cost.
 
-Show boundary/wall behavior, slip probabilities, floor rewards and terminal handling.
+The policy also changed at one position. In the original map the agent moved right, but in the extended map it moved up. This shows that tile costs can affect the best action.
 
+The ice tile is important because movement is not always predictable. The agent can slip and move in a different direction.
+
+The simulation results are similar to the value iteration results, but they are not exactly the same. Value iteration calculates expected future rewards, while simulations show what happened in a limited number of episodes.
+
+### Rule Checks
+
+**Boundary behavior**
+
+- Moving Up from (0,0) keeps the agent at (0,0).
+- Moving Left from (0,0) keeps the agent at (0,0).
+
+**Wall behavior**
+
+- Moving Right from (1,0) tries to enter the wall and the agent stays in the same state.
+
+**Ice probabilities**
+
+- Forward = 0.8
+- Side direction = 0.1
+- Side direction = 0.1
+- Total probability = 1.0
+
+**Floor rewards**
+
+- Ordinary floor = -1
+- Mud = -3
+- Sand = -2
+- Water = -5
+- Goal = +10
+- Hole = -10
+
+**Terminal handling**
+
+- Goal and Hole are terminal states.
+- No additional rewards are received after reaching Goal or Hole.
