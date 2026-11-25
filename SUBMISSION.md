@@ -63,7 +63,19 @@ Actions for the remaining nonterminal states were chosen to move the agent towar
 | True | fixed | 22 | 3 | 47 | 0 | 6.0 | 7.60 |
 | True | fixed | 33 | 2 | 48 | 0 | 4.0 | 8.62 |
 
-Link episode rows and example traces in outputs/. Explain slipping, variation across batches and why these runs do not train a policy.
+### Analysis
+
+When is_slippery=False, the fixed policy worked very well. It reached the goal in every episode. This happened because the agent always moved in the chosen direction, so it could follow the planned path to the goal without making mistakes.
+
+The random policy had much worse results. Most episodes ended in holes because the actions were chosen randomly. Sometimes the agent moved closer to the goal, but most of the time it could not find a safe path.
+
+When is_slippery=True, the results became worse for both policies. The agent could slip and move in a different direction than expected. Because of this, even the fixed policy often left the planned path and fell into a hole before reaching the goal.
+
+The results from the three batches were similar. There were some small differences, but the overall pattern stayed the same. This shows that the results are fairly consistent and not caused by just one lucky or unlucky batch.
+
+One successful episode is not enough to show that a policy is good. A policy can succeed once because of luck. Running many episodes gives a more reliable picture of how the policy usually performs.
+
+These experiments are not training. The policies stay the same during all runs. The agent does not learn from rewards or past episodes. We only test and compare the performance of the policies.
 
 ## Part C — Custom solver
 
