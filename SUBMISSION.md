@@ -2,7 +2,7 @@
 
 ## AI-use declaration
 
-Which tools did you use, and for what?
+I used Microsoft Copilot to better understand the assignment requirements, get a grasp of value iteration, and verify the steps in my calculations.
 
 ## Setup and reproduction
 
@@ -10,7 +10,7 @@ Record dependency versions, installation commands and exact run commands.
 
 ## Part A — Paper calculations
 
-Link your scan/photo here. Include V1 for every nonterminal tile, the three requested V2 calculations, best-action arrows/ties and your explanation. Commit this part before coding.
+The handwritten calculations for Part A can be found in the "PartA" folder. It contains V1, V2, arrows, an analysis of draws, and an explanation regarding the two iterations.
 
 ## Part B — FrozenLake
 
