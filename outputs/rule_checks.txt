@@ -1,0 +1,18 @@
+Boundary behavior:
+move((0,0),'U') -> (0,0)
+move((0,0),'L') -> (0,0)
+
+Wall behavior:
+move((1,0),'R') -> (1,0)
+
+Ice probabilities:
+0.8 + 0.1 + 0.1 = 1.0
+
+Rewards:
+Mud = -3
+Sand = -2
+Water = -5
+
+Terminal handling:
+Goal and Hole are terminal states.
+No rewards after termination.
