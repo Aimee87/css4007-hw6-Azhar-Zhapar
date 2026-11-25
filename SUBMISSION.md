@@ -16,7 +16,35 @@ The handwritten calculations for Part A can be found in the "PartA" folder. It c
 
 ### Fixed policy, written before the experiments
 
-State the action for each nonterminal state and your reasoning.
+The fixed policy was designed to follow a safe path to the goal while avoiding holes whenever possible.
+
+State 0 → Right
+
+State 1 → Right
+
+State 2 → Down
+
+State 3 → Left
+
+State 4 → Left
+
+State 6 → Down
+
+State 8 → Up
+
+State 9 → Right
+
+State 10 → Down
+
+State 13 → Right
+
+State 14 → Right
+
+The main path is:
+
+0 → 1 → 2 → 6 → 10 → 14 → 15 (Goal)
+
+Actions for the remaining nonterminal states were chosen to move the agent toward the goal and away from holes.
 
 ### Results
 
