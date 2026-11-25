@@ -1,0 +1,40 @@
+Step 0
+
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+
+Step 1
+  (Left)
+[41mS[0mFFF
+FHFH
+FFFH
+HFFG
+
+
+Step 2
+  (Right)
+S[41mF[0mFF
+FHFH
+FFFH
+HFFG
+
+
+Step 3
+  (Up)
+S[41mF[0mFF
+FHFH
+FFFH
+HFFG
+
+
+Step 4
+  (Down)
+SFFF
+F[41mH[0mFH
+FFFH
+HFFG
+
+
