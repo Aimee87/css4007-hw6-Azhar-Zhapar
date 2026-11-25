@@ -6,7 +6,7 @@ I used Microsoft Copilot to better understand the assignment requirements, get a
 
 ## Setup and reproduction
 
-Record dependency versions, installation commands and exact run commands.
+
 
 ## Part A — Paper calculations
 
