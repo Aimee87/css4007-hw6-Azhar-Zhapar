@@ -49,7 +49,19 @@ Actions for the remaining nonterminal states were chosen to move the agent towar
 ### Results
 
 | Slippery? | Policy | Batch seed | Goals /50 | Holes /50 | Time limits /50 | Success % | Mean steps |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+|-----------|---------|------------|-----------|-----------|-----------------|-----------|------------|
+| False | random | 11 | 0 | 50 | 0 | 0.0 | 6.84 |
+| False | random | 22 | 0 | 50 | 0 | 0.0 | 8.80 |
+| False | random | 33 | 2 | 48 | 0 | 4.0 | 8.64 |
+| False | fixed | 11 | 50 | 0 | 0 | 100.0 | 6.00 |
+| False | fixed | 22 | 50 | 0 | 0 | 100.0 | 6.00 |
+| False | fixed | 33 | 50 | 0 | 0 | 100.0 | 6.00 |
+| True | random | 11 | 1 | 49 | 0 | 2.0 | 8.04 |
+| True | random | 22 | 0 | 50 | 0 | 0.0 | 6.98 |
+| True | random | 33 | 0 | 50 | 0 | 0.0 | 7.04 |
+| True | fixed | 11 | 3 | 47 | 0 | 6.0 | 8.76 |
+| True | fixed | 22 | 3 | 47 | 0 | 6.0 | 7.60 |
+| True | fixed | 33 | 2 | 48 | 0 | 4.0 | 8.62 |
 
 Link episode rows and example traces in outputs/. Explain slipping, variation across batches and why these runs do not train a policy.
 
