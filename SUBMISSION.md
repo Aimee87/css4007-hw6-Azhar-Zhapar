@@ -77,6 +77,14 @@ One successful episode is not enough to show that a policy is good. A policy can
 
 These experiments are not training. The policies stay the same during all runs. The agent does not learn from rewards or past episodes. We only test and compare the performance of the policies.
 
+Successful trace example:
+
+0 → 1 → 2 → 6 → 10 → 14 → 15 (Goal)
+
+Failed trace example:
+
+0 → 4 → 5 (Hole)
+
 ## Part C — Custom solver
 
 ### Compare code with paper
