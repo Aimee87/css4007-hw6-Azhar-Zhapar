@@ -81,11 +81,58 @@ These experiments are not training. The policies stay the same during all runs. 
 
 ### Compare code with paper
 
-Show V1 and the requested V2 values. Explain discrepancies.
+The solver matched my paper calculations.
+
+V1:
+
+-1  -1  10   G
+-1   #  -1   H
+-1  -1  -1  -1
+
+Requested V2 values:
+
+- V2(1,2) = 8.00
+- V2(1,3) = 10.00
+- V2(2,3) = 5.21
+
+No discrepancies were found between the code results and the paper calculations.
 
 ### Values, policies and convergence
 
-Link both value/policy maps. Record iteration counts, final value changes and tie-breaking rule.
+### Values, policies and convergence
+
+The value maps and policy maps for both environments are attached below.
+
+Original map:
+- Iterations: 12
+- Final value change: 2.1652931048166124e-07
+
+Extended map:
+- Iterations: 11
+- Final value change: 2.405881232014906e-07
+
+Tie-breaking rule:
+If multiple actions had the same value, the first action encountered in the order U, R, D, L was selected.
+
+Value Map (Original):
+4.20  8.00 10.00 0.00
+2.78 ##### 5.82 0.00
+1.54  2.82 4.24 2.82
+
+Policy Map (Original):
+→ → → G
+↑ # ↑ H
+→ → ↑ ←
+
+Value Map (Extended):
+4.20  8.00 10.00 0.00
+2.78 ##### 5.82 0.00
+1.50  2.82 4.24 2.82
+
+Policy Map (Extended):
+→ → → G
+↑ # ↑ H
+↑ → ↑ ←
 
 ### Simulation results
 
