@@ -4,9 +4,33 @@
 
 I used Microsoft Copilot to better understand the assignment requirements, get a grasp of value iteration, and verify the steps in my calculations.
 
-## Setup and reproduction
+### Setup and reproduction
 
+Install dependencies:
 
+```bash
+pip install gymnasium pandas
+```
+
+Gymnasium version used:
+
+```text
+gymnasium 1.4.0
+```
+
+Run Part B:
+
+```bash
+jupyter notebook "Part B.ipynb"
+```
+
+Run Part C:
+
+```bash
+jupyter notebook "Part C.ipynb"
+```
+
+Outputs are saved in the `outputs/` folder.
 
 ## Part A — Paper calculations
 
